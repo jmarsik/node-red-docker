@@ -13,6 +13,8 @@ RUN npm install -g \
   node-red-node-suncalc \
   node-red-contrib-freeboard
 
+RUN cd /opt && git clone https://github.com/jmarsik/node-red-nodes.git && cd node-red-nodes/social/xmpp && npm install -g .
+
 # We expose the node-red port so that we can access it from the host
 EXPOSE 1880
 
